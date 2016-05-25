@@ -1,0 +1,22 @@
+{% extends "views/usuarioAnonimo.html" %}
+{% block content %}
+	<!--Inicio Sesion-->
+	<div id="header"></br></br>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="form-group">
+						<form role="form" action="/iniciarSesion" method="post">
+							<td class="label">Email:</td>
+							<input type="email" name ="email" value="{{email}}" class="form-control" placeholder="Introduzca el email"><p></p>
+							<td class="label">Contrase&ntilde;a:</td>
+							<input type="password" name="passwd" id="passwd" class="form-control" placeholder="Introduzca su contrase&ntilde;a"><p></p>
+							<button type="submit" class="btn btn-theme">Aceptar</button>
+							<td class="error"><font color="red">{{mensaje_error}}</font></td>
+					   </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

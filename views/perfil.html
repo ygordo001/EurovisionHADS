@@ -1,0 +1,28 @@
+{% extends "views/usuario.html" %}
+{% block content %}
+	<div id="header"></br>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<form class="form-horizontal signup" role="form" action="/perfil" method="post">
+						<div class="form-group">
+							<div class="jumbotron">
+								<h3>Nombre:</h3> {{nombre}}
+								<h3>Email:</h3> {{email}}
+								<h3>N&uacute;mero de comentarios publicados:</h3> {{numComentarios}}
+							</div>
+							<h2 style="color: white "> Comentarios publicados: </h2>
+							<h4 style="color: white "> (Se muestran tambi&eacute;n los comentarios pendientes de validaci&oacute;n) </h4>
+							{% for Comentario in Comentarios %}
+							<div class="jumbotron">
+								<h2>{{Comentario.titulo}}</h2>
+								<p>{{Comentario.texto}}</p>
+							</div>
+							{% endfor%}
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

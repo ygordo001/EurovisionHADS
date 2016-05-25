@@ -1,0 +1,32 @@
+{% extends "views/usuarioAnonimo.html" %}
+{% block content %}
+	<!--Inicio Sesion-->
+	<div id="header"></br>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<form class="form-horizontal signup" role="form" action="/registro" method="post">
+						<div class="form-group">
+							<td class="label">Email:</td>                                
+							<input type="email" name ="email" value="{{email}}" class="form-control" placeholder="Introduzca su email">
+							<td class="danger" ><font color="red">{{email_error}}</font></td><p></p>
+						</div>
+						<div class="form-group">
+							<td class="label">Nombre y apellidos:</td>
+							<input type="text"  name="nombre" value="{{nombre}}" class="form-control" placeholder="Introduzca su nombre"><p></p>
+						</div>
+						<div class="form-group">
+							<td class="label">Contrase&ntilde;a:</td>
+							<input type="password" name="passwd1" id="passwd1" class="form-control" placeholder="Introduzca su contrase&ntilde;a">
+							<td class="error"><font color="red">{{passwd_error}}</font></td><p></p>
+							<td class="label">Repita la contrase&ntilde;a:</td>
+							<input type="password" name="passwd2"  class="form-control" placeholder="Repita su contrase&ntilde;a">
+							<td class="error"><font color="red">{{validar_error}}</font></td><p></p>
+						</div>
+						<button type="submit" class="btn btn-theme">Aceptar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

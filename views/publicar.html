@@ -1,0 +1,19 @@
+{% extends "views/usuario.html" %}
+{% block content %}
+	<!--Publicar-->
+	<div id="header"></br>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<form class="form-horizontal signup" role="form" action="/publicar" method="post">
+						<div class="form-group">
+							<input type="text" class="form-control" name="titulo" value ="{{titulo}}"placeholder="Introduzca el titulo del comentario"><p></p>
+							<textarea name="texto" rows="20" cols="100" maxlength="1000000000000000000000000000" class="form-control" value="{{texto}}" placeholder="Introduzca su comentario"></textarea>
+						</div>
+						<button type="submit" class="btn btn-theme">Enviar</button><p></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

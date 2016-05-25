@@ -1,0 +1,22 @@
+{% extends "views/usuario.html" %}
+{% block content %}
+	<div id="header"></br>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<form class="form-horizontal signup" role="form" action="/inicioUsuario" method="post">
+						<div class="form-group">
+							{% for Comentario in Comentarios %}
+							<div class="jumbotron">
+								<h2>{{Comentario.titulo}}</h2>
+								<h4>{{Comentario.autor}}</h4>
+								<p>{{Comentario.texto}}</p>
+							</div>
+							{% endfor%}
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

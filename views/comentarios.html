@@ -1,0 +1,25 @@
+{% extends "views/usuarioAnonimo.html" %}
+{% block content %}
+<div id="header"></br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form class="form-horizontal signup" role="form" action="/comentarios" method="post">
+                    <div class="form-group">
+                        <td class="label">Introduzca la canci&oacute;n que desea buscar:</td>
+                        <input type="cancion" name ="cancion" value="{{cancion}}" class="form-control"><p></p>
+                        <input type="submit" class="btn btn-theme" value ="Aceptar"><p></p>
+						{% for Comentario in Comentarios %}
+                        <div class="jumbotron">
+                            <h2>{{Comentario.titulo}}</h2>
+                            <h4>{{Comentario.autor}}</h4>
+                            <p>{{Comentario.texto}}</p>
+                        </div>
+                        {% endfor%}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
